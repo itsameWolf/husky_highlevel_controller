@@ -6,9 +6,9 @@ add_definitions(--std=c++11)
 
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  sensor_msgs
-)
+        roscpp
+        sensor_msgs
+        )
 
 ###################################
 ## catkin specific configuration ##
@@ -20,13 +20,13 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS
-    include
-#  LIBRARIES
-  CATKIN_DEPENDS 
-    roscpp
-    sensor_msgs
-#  DEPENDS 
+        INCLUDE_DIRS
+        include
+        #  LIBRARIES
+        CATKIN_DEPENDS
+        roscpp
+        sensor_msgs
+        #  DEPENDS
 )
 
 ###########
@@ -36,19 +36,19 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
+        include
+        ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ executable
 add_executable(${PROJECT_NAME}
-  src/${PROJECT_NAME}_node.cpp
-  src/HuskyHighlevelController.cpp
-)
+        src/${PROJECT_NAME}_node.cpp
+        src/HuskyHighlevelController.cpp
+        )
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}
-  ${catkin_LIBRARIES}
-)
+        ${catkin_LIBRARIES}
+        )
 
 
